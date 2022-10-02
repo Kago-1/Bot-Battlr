@@ -9,9 +9,10 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotSpecs({ bot }) {
+function BotSpecs({ bot,handleClick,handleDelete}) {
+  
   return (
-    <div className="ui segment">
+    <div className="ui segment"  onClick={() =>handleClick(bot.id)}>
       <div className="ui two column centered grid">
         <div className="row">
           <div className="four wide column">
@@ -52,22 +53,21 @@ function BotSpecs({ bot }) {
             </div>
             <button
               className="ui button fluid"
-              onClick={() =>
-                console.log("connect this to a function that shows all bots")
-              }
+              // onClick={() =>handleClick(bot.id)}
             >
               Go Back
             </button>
             <button
               className="ui button fluid"
-              onClick={() =>
-                console.log(
-                  "connect this to a function that adds this bot to your bot army list"
-                )
-              }
+              // onClick={() => handleClick(bot.id)}
             >
               Enlist
             </button>
+            <button className="ui button fluid"
+             onClick={(e) => {
+              e.stopPropagation();
+              handleDelete(bot.id);
+              }}>X</button>
           </div>
         </div>
       </div>
@@ -76,3 +76,16 @@ function BotSpecs({ bot }) {
 }
 
 export default BotSpecs;
+
+// {
+//   "id": 101,
+//   "name": "wHz-93",
+//   "health": 94,
+//   "damage": 20,
+//   "armor": 63,
+//   "bot_class": "Support",
+//   "catchphrase": "1010010101001101100011000111101",
+//   "avatar_url": "https://robohash.org/nostrumrepellendustenetur.png?size=300x300&set=set1",
+//   "created_at": "2018-10-02T19:55:10.800Z",
+//   "updated_at": "2018-10-02T19:55:10.800Z"
+// },
