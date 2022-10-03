@@ -1,7 +1,7 @@
 import React from "react";
 import BotCard from "./BotCard";
 import BotsPage from "./BotsPage";
-import BotSpecs from "./BotSpecs";
+
 
 function YourBotArmy({bots,handleClick,handleDelete}) {
   //your bot army code here...
@@ -12,7 +12,7 @@ function YourBotArmy({bots,handleClick,handleDelete}) {
         <div className="row bot-army-row">
         Your Bot Army
           {/*...and here...*/}
-          {bots.map((bot)=><BotSpecs
+          {bots.map((bot)=><BotCard
           key={bot.id}
           bot={bot}
           handleClick ={handleClick}

@@ -9,10 +9,10 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotSpecs({ bot,handleClick,handleDelete}) {
+function BotSpecs({bot}) {
   
   return (
-    <div className="ui segment"  onClick={() =>handleClick(bot.id)}>
+    <div className="ui segment" >
       <div className="ui two column centered grid">
         <div className="row">
           <div className="four wide column">
@@ -63,11 +63,6 @@ function BotSpecs({ bot,handleClick,handleDelete}) {
             >
               Enlist
             </button>
-            <button className="ui button fluid"
-             onClick={(e) => {
-              e.stopPropagation();
-              handleDelete(bot.id);
-              }}>X</button>
           </div>
         </div>
       </div>

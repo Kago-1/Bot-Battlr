@@ -1,5 +1,6 @@
 import React from "react";
-import BotSpecs from "./BotSpecs";
+import BotCard from "./BotCard";
+// import BotSpecs from "./BotSpecs";
 
 function BotCollection({bots, handleClick, handleDelete}) {
   // Your code here
@@ -8,7 +9,7 @@ function BotCollection({bots, handleClick, handleDelete}) {
       <div className="row">        
         {/*...and here..*/}
         Collection of all bots
-        {bots.map((bot)=> <BotSpecs
+        {bots.map((bot)=> <BotCard
         key={bot.id}
         bot={bot} 
         handleClick={handleClick}
