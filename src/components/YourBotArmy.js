@@ -1,6 +1,5 @@
 import React from "react";
 import BotCard from "./BotCard";
-import BotsPage from "./BotsPage";
 
 
 function YourBotArmy({bots,handleClick,handleDelete}) {
